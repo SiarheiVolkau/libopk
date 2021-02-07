@@ -22,7 +22,7 @@ include_directories(${INI_INCLUDE_DIRS})
 
 pkg_check_modules(ZLIB QUIET zlib)
 if (ZLIB_FOUND)
-	add_compile_definitions(USE_GZIP)
+	add_definitions(-DUSE_GZIP)
 	link_directories(${ZLIB_LIBRARY_DIRS})
 	include_directories(${ZLIB_INCLUDE_DIRS})
 endif (ZLIB_FOUND)
